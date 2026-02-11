@@ -40,3 +40,48 @@
 # è: 2
 # ```
 
+def conta_parole(nome_file) -> dict:
+    try:
+        with open(nome_file, "r" , encoding="utf-8") as file:
+            contenuto = file.read()
+    except FileNotFoundError:
+        print(f"Errore: il file {nome_file}  non è stato trovato.")
+    except IOError as e:
+        print(f"Errore durante la lettura del file: {e}")  
+
+    contenuto_parole = contenuto.split()
+    conteggio = []
+    for parola in contenuto_parole:
+        conteggio_dopo ={parola : len(parola)}
+        conteggio.append(conteggio_dopo) 
+    return conteggio   
+
+
+
+# Definire stampa_conteggio(dizionario): Accetta il dizionario e lo stampa in ordine alfabetico delle chiavi.
+
+def stampa_conteggio(conteggio) ->None:
+    for dict in conteggio:
+        print(f"{dict}")
+
+
+
+# Definire main():
+
+# Definisce testo (dati hardcoded)
+# Scrive testo su "esercizio57.txt"
+# Chiama conta_parole e stampa_conteggio
+
+
+
+
+def main():
+    testo = "Python è un linguaggio di programmazione. Python è semplice e potente."
+    try:
+        with open("esercizio57.txt", "w", encoding="utf-8") as file:
+            file.write(testo)
+    except IOError as e:
+        print(f"Errore durante la scrittura del file: {e}")  
+    conteggio = conta_parole("esercizio57.txt")
+    stampa_conteggio(conteggio)
+main()
