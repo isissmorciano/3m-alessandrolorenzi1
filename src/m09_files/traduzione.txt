@@ -1,0 +1,47 @@
+Funzioni - Validazione
+def valida_voto(voto_str) -> list[bool, str | float]
+    """Valida il voto. Restituisce (è_valido, valore_o_errore)."""
+
+Funzioni - I/O Formattazione
+def formatta_lista(studenti) -> str
+    """Formatta la lista degli studenti come stringa. Restituisce l'output formattato."""
+
+def mostra_dettaglio(studenti, indice) -> list[bool, str, dict | None]
+    """Mostra il dettaglio di uno studente. Restituisce (successo, messaggio, dati)."""
+
+Funzioni - Operazioni CRUD
+def aggiungi_studente(studenti) -> list[bool, str, dict | None]
+    """Aggiunge uno studente. Restituisce (successo, messaggio, nuovo_studente)."""
+
+def cancella_studente(studenti) -> list[bool, str]
+    """Elimina uno studente per indice. Restituisce (successo, messaggio)."""
+
+def aggiorna_studente(studenti) -> list[bool, str]
+    """Aggiorna il voto di uno studente. Restituisce (successo, messaggio)."""
+
+Funzioni - Ricerca e Filtro
+def ricerca_per_nome(studenti, termine=None) -> list
+    """Cerca studenti per nome. Restituisce la lista dei risultati."""
+
+def filtra_per_voto(studenti, min_voto=None, max_voto=None) -> list
+    """Filtra per intervallo di voti. Restituisce la lista dei risultati."""
+
+Funzioni - Statistiche
+def calcola_media(studenti) -> float
+    """Calcola la media dei voti. Restituisce un float."""
+
+def trova_migliore(studenti) -> dict | None
+    """Trova lo studente migliore. Restituisce il dizionario dello studente oppure None."""
+
+def trova_peggiore(studenti) -> dict | None
+    """Trova lo studente peggiore. Restituisce il dizionario dello studente oppure None."""
+
+Funzioni - I/O e Main
+def load_studenti(path=STORAGE_FILE) -> list
+    """Carica dal file JSON. Restituisce una lista vuota se non trovato."""
+
+def save_studenti(studenti, path=STORAGE_FILE) -> None
+    """Salva nel file JSON."""
+
+def main() -> None
+    """Ciclo principale del menu - gestisce tutto l'output."""

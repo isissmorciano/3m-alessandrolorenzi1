@@ -1,0 +1,22 @@
+{
+    "entrate": [
+        {
+            "data": "2026-04-08",
+            "testo": "Ho iniziato un nuovo corso python",
+            "categoria": "studio",
+            "durata": 60
+        },
+        {
+            "data": "2026-04-08",
+            "testo": "Ho scritto un esercizio sul package diario.",
+            "categoria": "studio",
+            "durata": 45
+        },
+        {
+            "data": "2026-04-09",
+            "testo": "Sono andato a fare una passeggiata nel bosco",
+            "categoria": "tempo libero",
+            "durata": 30
+        }
+    ]
+}
